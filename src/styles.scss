@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bulma/bulma";
+@import url('https://fonts.googleapis.com/css?family=Righteous|Russo+One');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Russo One', sans-serif;
+}
