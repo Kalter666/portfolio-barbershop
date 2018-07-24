@@ -1,0 +1,29 @@
+<div class="head">
+  <div class="columns">
+    <div class="column is-one-fifth">
+      <div class="padding-left-50 padding-top-50">
+        <a (click)="onMenuToggle()">
+          <img src="../../../assets/img/tools/scissor-clippers.png" alt="scissor-clippers" width="100">
+        </a>
+        <nav class="has-text-centered" [ngClass]="{ 'menu-toggled': isMenuOpened }">
+          <ul>
+            <li><a>О барбершопе</a></li>
+            <li><a>Услуги</a></li>
+            <li><a routerLink="стрижка">Стрижка</a></li>
+            <li><a routerLink="бритьё">Бритьё</a></li>
+            <li><a>Прайс-Лист</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="column has-text-centered logo">
+      <h1 class="heading">Barbershop</h1>
+      <figure>
+        <img [lazyLoad]="'../../../assets/img/logo.png'" alt="logo">
+      </figure>
+      <h2>Парикмахерская для настоящих мужчин</h2>
+    </div>
+    <div class="column is-one-fifth"></div>
+  </div>
+</div>

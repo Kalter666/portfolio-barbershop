@@ -10,6 +10,10 @@ import { HaircutComponent } from './haircut/haircut.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeadComponent } from './main/head/head.component';
+import { WelcomeComponent } from './main/welcome/welcome.component';
+import { PriceComponent } from './main/price/price.component';
+import { OffersComponent } from './main/offers/offers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { AppRoutingModule } from './app-routing.module';
     ShavingComponent,
     HaircutComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeadComponent,
+    WelcomeComponent,
+    PriceComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
