@@ -1,0 +1,32 @@
+.title {
+  color: #cccc00;
+  padding-top: 15%;
+}
+
+.page-title {
+  text-transform: uppercase;
+  font-size: 48px;
+  padding-top: 4vw;
+}
+
+.columns {
+  padding-top: 4vw;
+  padding-bottom: 15vw;
+}
+
+.content {
+  width: 500px;
+  height: 500px;
+}
+
+.block {
+  background-color: black;
+}
+
+.haircut:hover {
+  background: url("../../../assets/img/main/hai-phung-247271-unsplash.png");
+}
+
+.shaving:hover {
+  background: url("../../../assets/img/main/christoffer-engstrom-189365-unsplash.png");
+}

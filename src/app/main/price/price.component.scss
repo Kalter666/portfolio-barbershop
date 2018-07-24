@@ -1,0 +1,58 @@
+$bg: white;
+$dark: black;
+
+.title {
+  padding-top: 5vw;
+}
+
+.column {
+  padding-bottom: 1px;
+}
+
+/* * * * * * * * * * *
+*      Dot Leader
+* * * * * * * * * * * */
+
+ul.leaders {
+  max-width: 37em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+
+  li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    color: $dark;
+    content: "___________________________________________________________________________________________________________________________________________________________________________________";
+  }
+
+  span:first-child {
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-right: 0.33em;
+    background: $bg;
+  }
+
+  span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: $bg;
+  }
+}
+
+.fancy-rule {
+  border:none;
+  width:600px;
+  overflow:hidden;
+  height:20px;
+  text-align: center;
+  color: $dark;
+}
+.rgba {
+  color: rgba(0,0,0,0.15);
+}
+.fancy-rule.asterism:before {
+  content:"o————|| ⧖ ||————o";
+  letter-spacing:-1px;
+}
