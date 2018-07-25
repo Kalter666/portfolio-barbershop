@@ -1,1 +1,25 @@
 <app-header [title]="'БРИТЬЁ'"></app-header>
+<div style="padding-top: 24px">
+  <div class="columns" *ngFor="let item of list; let i = index">
+    <div class="column is-paddingless">
+      <ng-container *ngIf="i % 2 === 0; then img; else article"></ng-container>
+    </div>
+    <div class="column is-paddingless">
+      <ng-container *ngIf="i % 2 !== 0; then img; else article"></ng-container>
+    </div>
+
+    <ng-template #img>
+      <figure>
+        <img [lazyLoad]="'../../assets/img/shaving/'+item.img+'.png'" [alt]="'item.img'">
+      </figure>
+    </ng-template>
+    <ng-template #article>
+      <h2 class="title has-text-centered">{{ item.title }}</h2>
+      <div class="content">
+        <p *ngFor="let par of item.p">
+          {{ par }}
+        </p>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../list.interface';
+import { shavingList } from './shaving-list';
 
 @Component({
   selector: 'app-shaving',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shaving.component.scss']
 })
 export class ShavingComponent implements OnInit {
+  list: Item[];
 
-  constructor() { }
+  constructor() {
+    this.list = shavingList;
+  }
 
   ngOnInit() {
   }

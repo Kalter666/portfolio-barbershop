@@ -1,4 +1,6 @@
-export const list: { title: string, p: string[], img: string }[] = [
+import { Item } from '../list.interface';
+
+export const shavingList: Item[] = [
   {
     title: 'Королевское бритье: возрождение традиций',
     p: [
