@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll/lib';
 
@@ -29,7 +30,7 @@ import { OffersComponent } from './main/offers/offers.component';
     OffersComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'barbershop' }),
     AppRoutingModule,
     LazyLoadImageModule,
     SimpleSmoothScrollModule
@@ -37,4 +38,5 @@ import { OffersComponent } from './main/offers/offers.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

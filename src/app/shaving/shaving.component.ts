@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../list.interface';
 import { shavingList } from './shaving-list';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-shaving',
@@ -10,11 +11,12 @@ import { shavingList } from './shaving-list';
 export class ShavingComponent implements OnInit {
   list: Item[];
 
-  constructor() {
+  constructor(private titleService: Title) {
     this.list = shavingList;
   }
 
   ngOnInit() {
+    this.titleService.setTitle('Барбершоп | Бритьё');
   }
 
 }
