@@ -19,14 +19,41 @@
   height: 500px;
 }
 
-.block {
-  background-color: black;
-}
-
-.haircut:hover {
+.haircut {
   background: url("../../../assets/img/main/hai-phung-247271-unsplash.png");
 }
 
-.shaving:hover {
+.shaving {
   background: url("../../../assets/img/main/christoffer-engstrom-189365-unsplash.png");
+}
+
+.haircut,
+.shaving {
+  filter: brightness(0);
+  transition: all .3s ease-in;
+}
+
+a {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  display: block;
+}
+
+a:hover {
+  .haircut,
+  .shaving {
+    filter: brightness(1);
+  }
+}
+
+.block,
+.transparent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.transparent {
+  z-index: 10;
 }
