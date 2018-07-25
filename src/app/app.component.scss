@@ -1,0 +1,24 @@
+img {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#up-arrow {
+  transition: all .2s ease-in;
+}
+
+#up-arrow:hover {
+  transform: scale(1.2);
+  filter: hue-rotate(50deg);
+}
+
+#up-arrow:active {
+    transform: scale(1.05);
+}
+

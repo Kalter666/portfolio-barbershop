@@ -1,20 +1,18 @@
 <div class="head">
   <div class="columns">
     <div class="column is-one-fifth">
-      <div class="padding-left-50 padding-top-50">
-        <a (click)="onMenuToggle()">
+      <nav class="has-text-centered dropdown">
+        <a class="dropdown-btn">
           <img src="../../../assets/img/tools/scissor-clippers.png" alt="scissor-clippers" width="100">
         </a>
-        <nav class="has-text-centered" [ngClass]="{ 'menu-toggled': isMenuOpened }">
-          <ul>
-            <li><a href="#welcome">О барбершопе</a></li>
-            <li><a href="#offers">Услуги</a></li>
-            <li><a routerLink="стрижка">Стрижка</a></li>
-            <li><a routerLink="бритьё">Бритьё</a></li>
-            <li><a href="#price">Прайс-Лист</a></li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="dropdown-content">
+          <li><a href="#welcome">О барбершопе</a></li>
+          <li><a href="#offers">Услуги</a></li>
+          <li><a routerLink="стрижка">Стрижка</a></li>
+          <li><a routerLink="бритьё">Бритьё</a></li>
+          <li><a href="#price">Прайс-Лист</a></li>
+        </ul>
+      </nav>
     </div>
 
     <div class="column has-text-centered logo">
