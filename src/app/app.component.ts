@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       const scrollFunction = function () {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-          document.getElementById('up-arrow').style.display = 'block';
+          document.getElementById('up-arrow').style.display = 'flex';
         } else {
           document.getElementById('up-arrow').style.display = 'none';
         }

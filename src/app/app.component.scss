@@ -1,4 +1,18 @@
-img {
+#up-arrow {
+  transition: all .2s ease-in;
+}
+
+#up-arrow:hover {
+  transform: scale(1.1);
+  background-color: #cccc00;
+}
+
+#up-arrow:active {
+    transform: scale(1.05);
+}
+
+
+div {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -7,18 +21,9 @@ img {
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: #cccc00;
+  width: 70px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
 }
-
-#up-arrow {
-  transition: all .2s ease-in;
-}
-
-#up-arrow:hover {
-  transform: scale(1.2);
-  filter: hue-rotate(50deg);
-}
-
-#up-arrow:active {
-    transform: scale(1.05);
-}
-
