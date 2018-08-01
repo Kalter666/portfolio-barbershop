@@ -2,9 +2,9 @@ ARG port=4000
 
 FROM node
 
-WORKDIR /app/ritual
+WORKDIR /app/barbershop
 
-COPY /dist /app/ritual/dist
+COPY /dist /app/barbershop/dist
 
 EXPOSE ${port}
 
