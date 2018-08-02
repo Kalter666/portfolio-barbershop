@@ -1,6 +1,6 @@
 ARG port=4000
 
-FROM node:carbon-slim
+FROM node:carbon
 
 WORKDIR /app/barbershop
 
