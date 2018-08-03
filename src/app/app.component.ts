@@ -2,6 +2,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { SimpleSmoothScrollOption, SimpleSmoothScrollService } from 'ng2-simple-smooth-scroll/lib';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,9 @@ import { SimpleSmoothScrollOption, SimpleSmoothScrollService } from 'ng2-simple-
 export class AppComponent implements OnInit {
   isBrowser;
 
-  constructor(private simpleSmoothService: SimpleSmoothScrollService,
+  constructor(
+    private router: Router,
+    private simpleSmoothService: SimpleSmoothScrollService,
               @Inject(PLATFORM_ID) private platformId
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -35,5 +38,11 @@ export class AppComponent implements OnInit {
         scrollFunction();
       };
     }
+    this.router.events
+    .subscribe(event => {
+      if (event instanceof  NavigationEnd) {
+        this.simpleSmoothService.smoothScrollToTop(new SimpleSmoothScrollOption(100, 'ease-in'));
+      }
+    });
   }
 }
